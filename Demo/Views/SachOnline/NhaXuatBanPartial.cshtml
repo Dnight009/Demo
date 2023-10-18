@@ -1,0 +1,9 @@
+﻿<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+        Sách theo nhà xuất bản
+    </a>
+    @foreach (Demo.Models.NHAXUATBAN item in Model)
+    {
+        <a href="@Url.Action("SachTheoChuDe", "SachOnline", new {MaNXB = item.TenNXB})" class="list-group-item list-group-item-action">@item.TenNXB</a>
+    }
+</div>

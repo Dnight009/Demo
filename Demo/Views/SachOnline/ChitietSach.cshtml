@@ -1,0 +1,16 @@
+﻿@*@model Demo.Models.SACH*@
+@{
+    ViewBag.Title = "ChitietSach";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>ChitietSach</h2>
+
+<div class="card" ">
+    <h5 class="card-title">@Model.Tensach</h5>
+    <img src="@Model.Anhbia" class="card-img-top" alt="Not found image" style=" width=50px align-self:center">
+    <div class="card-body">
+        <p class=" card-text"> @Model.Mota</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>

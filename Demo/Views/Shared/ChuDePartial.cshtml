@@ -1,0 +1,9 @@
+﻿<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+        sách theo chủ đề
+    </a>
+    @foreach (Demo.Models.CHUDE item in Model)
+    {
+        <a href="@Url.Action("SachTheoNXB", "SachOnline", new {MaCD = item.MaCD})" class="list-group-item list-group-item-action">@item.TenChuDe</a>
+    }
+</div>

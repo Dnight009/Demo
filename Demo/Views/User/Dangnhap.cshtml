@@ -1,0 +1,32 @@
+﻿@model Demo.Models.UserLogin
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>Dangnhap</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <tr>
+        <td>Ten Dang Nhap</td>
+        <td>
+            @Html.TextBoxFor(m => m.UserName, new { @class = " form-control" })
+            @Html.ValidationMessageFor(m => m.UserName, "", new {@class = " text-danger"})
+        </td>
+    </tr>
+    <tr>
+        <td>Mat Khau</td>
+        <td>
+            @Html.PasswordFor(m => m.Password, new { @class = " form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = " text-danger" })
+        </td>
+
+    </tr>
+    <td>
+        <button type="submit" class=" btn btn-primary"> Dang nhap</button><br/>
+        <label class="text-primary"> @ViewBag.ThongBao</label>
+        
+    </td>
+}
+
